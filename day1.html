@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+   <p id="ptag"></p>
+   <p id="tag"></p>
+   <script type="text/javascript">
+        var tshirt = 400;
+        var cap = 150;
+        var tshirt_sold=5;
+        var cap_sold=3;
+        var earning = tshirt*tshirt_sold+cap*cap_sold;
+        document.getElementById("ptag").innerHTML = "Earnings"+" "+earning;
+        var tshirt=450;
+        var newearning = tshirt*tshirt_sold+cap*cap_sold;
+        document.getElementById("tag").innerHTML = "New Earnings"+" "+newearning;
+   </script> 
 </body>
 </html>
