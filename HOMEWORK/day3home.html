@@ -13,11 +13,9 @@
             bio: " I LOVE coding! JavaScript is Great!!! "
         };
         function cleanUserBio(profile){
-             var cleanUsername = profile.username.trim()
-             var cleanUsername = profile.username.toLowerCase();
-
-             var cleanBio = profile.bio.trim();
-             var cleanBio = profile.bio.toLowerCase();
+             var cleanUsername = profile.username.trim().toLowerCase();
+    
+             var cleanBio = profile.bio.trim().toLowerCase();
             
              var cleanBio=cleanBio.replace(/javascript/g, "js");
 
