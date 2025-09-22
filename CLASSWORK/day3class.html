@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <h2>Feedback Form</h2>
+    <p id="original"></p>
+    <p id="trim"></p>
+    <p id="lowercase"></p>
+    <p id="replace"></p>
+    <p id="position"></p>
+    <p id="array"></p>
+    <script type="text/javascript">
+        var feedback= "   I loved the FOOD and the service!   ";
+        document.getElementById("original").innerHTML="Original Feedback:"+" "+feedback;
+
+        var trimmed=feedback.trim();
+        var lower=trimmed.toLowerCase();
+        var replaced = lower.replace("food", "ambience");
+        var position=replaced.indexOf("service");
+        var wordsArray = replaced.split(" ");
+        
+        document.getElementById("trim").innerHTML="New Sentence:"+" "+trimmed;
+        document.getElementById("lowercase").innerHTML="Lowercase Sentence:"+" "+lower;
+        document.getElementById("replace").innerHTML="Replaced Sentence:"+" "+replaced;
+        document.getElementById("position").innerHTML="Position of service:"+" "+position;
+        document.getElementById("array").innerHTML="Array: [" + wordsArray.join(", ") + "]";
+    </script>
+</body>
+</html>
