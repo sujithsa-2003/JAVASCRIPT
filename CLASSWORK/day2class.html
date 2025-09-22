@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+</head>
+<body>
+     <h2>Book Details</h2>
+     <p id="output"></p>
+    <script type="text/javascript">
+        let book={
+            title:'lokha',
+            author: 'dulquer salmaan',
+            year:2025
+            getSummary:function(){
+                return "The book '" + this.title + "' was written by " + this.author + " in " + this.year + ".";
+            }
+        }
+         function printBookSummary(bookObj) {
+         document.getElementById("output").textContent = bookObj.getSummary();
+         }
+          printBookSummary(book);
+    </script>
+</body>
+</html>
