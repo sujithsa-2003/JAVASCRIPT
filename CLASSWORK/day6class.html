@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing</title>
+</head>
+<body>
+    <h2>Grocery Store</h2>
+    <p id="productList"></p>
+    <p id="filteredProducts"></p>
+    <p id="updatedProducts"></p>
+    <script>
+        let products=["Apple","Grapes","Mango","Banana"];
+        let price=[50,65,60,55];
+
+        let merged = "";
+        for (let i = 0; i < products.length; i++) {
+            merged += "Product: " + products[i] + " - Price: " + price[i] + "<br>";
+        }
+         document.getElementById("productList").innerHTML = "The Product List:<br>"+merged;
+
+         let filtered = "";
+        for (let i = 0; i < products.length; i++) {
+            filtered += price[i] > 50 ? "Product: " + products[i] + " - Price: " + price[i] + "<br>" : "";
+        }
+        document.getElementById("filteredProducts").innerHTML = "Products with Price > 50:<br>" + filtered;
+        
+        products.push("Watermelon");
+        price.push(80);
+         let updated = "";
+        for (let i = 0; i < products.length; i++) {
+            updated += "Product: " + products[i] + " - Price: " + price[i] + "<br>";
+        }
+        document.getElementById("updatedProducts").innerHTML = "Updated Product List:<br>" + updated;
+
+    </script>
+</body>
+</html>
