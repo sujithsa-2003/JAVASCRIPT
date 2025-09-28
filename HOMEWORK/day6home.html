@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        let students=
+        let students =
         [
             {name:"Alice",mark:90},
             {name:"John",mark:70},
@@ -16,33 +16,33 @@
             {name:"Teena",mark:95}
         ]
 
-        let names = Names of students: ${students.map(disp_names)};
+        let names = 'Names of students: ${students.map(disp_names)}';
         function disp_names(value,index,array)
         {
             return value.name;
         }
         
-        let marks_60 = Students who obtained marks above 60:${students.filter(s => s.mark>60).map(s => s.name).join(", ")};
+        let marks_60 = 'Students who obtained marks above 60:${students.filter(s => s.mark>60).map(s => s.name).join(", ")}';
 
-        let sum = Total Sum of marks:${students.reduce(totalSum,0)};
+        let sum = 'Total Sum of marks:${students.reduce(totalSum,0)}';
         function totalSum(total, value, index, array)
         {
           return total + value.mark;
         }
 
-        let allpass = Did every students passed(true/false):${students.every(pass)};
+        let allpass = 'Did every students passed(true/false):${students.every(pass)}';
         function pass(value, index, array)
         {
             return value.mark>35;
         }
 
-        let atleastone = Did atleast on student obtained above 90 marks(true/false):${students.some(atleast)};
+        let atleastone = 'Did atleast on student obtained above 90 marks(true/false):${students.some(atleast)}';
         function atleast(value, index, array)
         {
             return value.mark>90;
         }
 
-        let desc_sort = Sorted Array in descending order: ${students.sort((a,b)=>b.mark-a.mark).map(s=>${s.name}-${s.mark}).join(", ")};
+        let desc_sort = 'Sorted Array in descending order: ${students.sort((a,b)=>b.mark-a.mark).map(s=>${s.name}-${s.mark}).join(", ")}';
 
         console.log(names);
         console.log(marks_60);
