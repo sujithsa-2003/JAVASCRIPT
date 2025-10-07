@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Calculator</title>
+</head>
+<body>
+  <p>
+    Simple Grocery Calculator <br>
+    Code 1 = Apple (₹30 each) <br>
+    Code 2 = Banana (₹10 each) <br>
+    Code 3 = Mango (₹50 each) <br>
+  </p>
+
+  <script>
+    // Loop for 5 purchases
+    for (let i = 1; i <= 5; i++) {
+      let code = Number('prompt(Purchase ${i}: Enter product code (1=Apple, 2=Banana, 3=Mango)'));
+      let qty = Number(prompt(Purchase ${i}: Enter quantity));
+
+      let total = 0;
+      let itemName = "";
+
+      // switch for price calculation
+      switch (code) {
+        case 1:
+          itemName = "Apple";
+          total = qty * 30;
+          break;
+        case 2:
+          itemName = "Banana";
+          total = qty * 10;
+          break;
+        case 3:
+          itemName = "Mango";
+          total = qty * 50;
+          break;
+        default:
+          alert("Invalid product code! Skipping this purchase...");
+          continue; // skip iteration if wrong code
+      }
+
+      // show result for this item
+      alert(${itemName} x ${qty} = ₹${total});
+
+      // if...else for special message
+      if (total > 100) {
+        alert("High purchase");
+      } else {
+        alert("Normal purchase");
+      }
+    }
+  </script>
+</body>
+</html>
