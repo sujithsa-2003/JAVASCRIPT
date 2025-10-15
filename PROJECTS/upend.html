@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="root"></h1>
+    <script>
+        let num;
+        num=Number(prompt("Enter the number"));
+        let res=Math.sqrt(num);
+        document.getElementById("root").innerHTML="Square root of"+ num + "is" + res;
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Enter name: <input type="text" name="fname"  id="nam"><br><br>
+    Enter date:<input type="date" name="lname"  id="dat"><br><br>
+    <button id="btn">Submit</button>
+    <ul id="list"></ul>
+    <script>
+        const input1=document.getElementById("nam");
+        const input2=document.getElementById("dat");
+        const but=document.getElementById("btn");
+        const ull=document.getElementById("list");
+
+        but.addEventListener("click",function(){
+            let li=document.createElement("li");
+            // let li2=document.createElement("li");
+
+            // li.textContent=input1.value;
+            // li.textContent=input2.value;
+            li.innerHTML = input1.value + "<br>" + input2.value;
+
+            ull.appendChild(li);
+            // list.appenChild("li2");
+
+            input1.value="";
+            input2.value="";
+        })
+    </script>
+</body>
+</html>
